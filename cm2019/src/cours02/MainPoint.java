@@ -1,11 +1,16 @@
 package cours02;
 
 public class MainPoint {
+	public double abscisse, ordonnee;
+	
 	public static void main(String[] args) {
-		Point p1 = new Point(5,6);
-		System.out.println(p1);
-		p1.translation(2,2);
-		System.out.println(p1);
+		Point a = new Point('A',2,3);
+		
+		System.out.println(a);
+		a.translate(2, 2);
+		System.out.println(a);
 	}
+
+
 
 }

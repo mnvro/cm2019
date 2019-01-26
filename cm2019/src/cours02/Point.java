@@ -1,16 +1,13 @@
 package cours02;
 
 public class Point {
-	private double abscisse;
-	private double ordonnee;
+	char lettre;
+	double abscisse;
+	double ordonnee;
+//	public int rayon;
+//	public static double dx = 8;
+//	public static double dy = 7;
 
-	public Point() {
-	}
-	public Point(double abscisse, double ordonnee) {
-		super();
-		this.abscisse = abscisse;
-		this.ordonnee = ordonnee;
-	}
 	public double getAbscisse() {
 		return abscisse;
 	}
@@ -24,12 +21,35 @@ public class Point {
 		this.ordonnee = ordonnee;
 	}
 	public String toString() {
-		return "Point [abscisse=" + abscisse + ", ordonnee=" + ordonnee + "]";
+		return lettre+"(" + abscisse + ";" + ordonnee + ")";
 	}
-
-	public void translation (double dx,double dy){
-		abscisse += dx; // abscisse = abscisse + dx
+	public Point() {
+	}
+	
+	public Point(char lettre, double abscisse, double ordonnee) {
+		this.lettre = lettre;
+		this.abscisse = abscisse;
+		this.ordonnee = ordonnee;
+	}
+	public void translate(double dx, double dy) {
+		abscisse += dx;
 		ordonnee += dy;
 	}
-
+	public static void main(String[] args) {
+		Point a = new Point();
+		a.lettre = 'A';
+		a.abscisse = 2;
+		a.ordonnee = 3;
+		System.out.println(a);
+		Point b = new Point();
+		b.lettre = 'B';
+		System.out.println(b);
+		a.translate(3, 2);
+		b.translate(3,  2);
+		System.out.println(a);
+		System.out.println(b);
+	}
+	
+	
+	
 }
