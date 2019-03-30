@@ -7,18 +7,18 @@ import cours09.modele.Date;
 import cours09.vue.JFrameAffichage;
 import cours09.vue.JFrameNouvelleDate;
 
-public class Application implements ActionListener {
+public class ApplicationModifieDate implements ActionListener {
 	private Date date;
 	private JFrameAffichage jFrameAffichage;
 	private JFrameNouvelleDate jFrameNouvelleDate;
 	
-	public Application() {
+	public ApplicationModifieDate() {
 		jFrameAffichage = new JFrameAffichage();
 		jFrameNouvelleDate = new JFrameNouvelleDate();
 		jFrameNouvelleDate.addActionAuJButton(this);
 	}
 	public static void main(String[] args) {
-		Application application = new Application();
+		ApplicationModifieDate application = new ApplicationModifieDate();
 	}
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
